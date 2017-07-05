@@ -1,0 +1,62 @@
+.circle-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: red;
+    filter: blur(7px);
+    opacity: 0.5;
+    animation-name: resizing;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes resizing {
+    0% {
+        width: 90%;
+        height: 100%;
+    }
+
+    50% {
+        width: 100%;
+        height: 90%;
+    }
+
+    100% {
+        height: 100%;
+        width: 90%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#0E3D70, #165B9B, #134985);
+    overflow: hidden;
+}

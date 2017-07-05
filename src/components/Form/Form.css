@@ -1,0 +1,10 @@
+.form {
+    padding: 10px;
+    z-index: 0;
+}
+
+.form .input {
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+}
