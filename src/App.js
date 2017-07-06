@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import { View } from './components/View';
-import { Input, Form } from './components/Form';
+import { Input, Form, Field } from './components/Form';
+import { Icon } from './components/Icon';
 
 class App extends Component {
   render() {
     return (
         <View>
             <Form>
-                <Input ph='Email ' />
-                <Input ph='Password ' />
+                <Field>
+                    <Input ph='Email ' />
+                </Field>
+                <Field>
+                    <Input ph='Password ' />
+                    <Icon name='sign_in'/>
+                </Field>
             </Form>
         </View>
     );

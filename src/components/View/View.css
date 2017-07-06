@@ -1,12 +1,10 @@
 .circle-box {
-    /*position: absolute;*/
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(500px, 70px);
     animation:
-            breathing 1s infinite 0.1s,
-            moving 20s infinite 0.1s;
+            breathing 0.9s infinite 0.1s;
 }
 
 .circle {
@@ -15,59 +13,97 @@
     border-radius: 100%;
     background: red;
     filter: blur(4px);
-    animation: colorChanging 5s ease infinite alternate;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 @keyframes breathing {
     0% {
         transform: scale(1, 1);
+        opacity: 1;
     }
 
     50% {
-        transform: scale(0.97, 1.03)
+        transform: scale(0.99, 1.01);
+        opacity: 0.8;
     }
 
     100% {
         transform: scale(1, 1);
+        opacity: 1;
     }
 }
 
-/*@keyframes moving {*/
-    /*0% {*/
-        /*transform: translate(0, 0);*/
-    /*}*/
+@keyframes moving1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
 
-    /*50% {*/
-        /*transform: translate(200px, 100px);*/
-    /*}*/
+    50% {
+        transform: translate(10%, 10%);
+    }
 
-    /*75% {*/
-        /*transform: translate(100px, 100px);*/
-    /*}*/
+    75% {
+        transform: translate(-20%, 20%);
+    }
+}
 
-    /*100% {*/
-        /*transform: translate(-120px, 100px);*/
-    /*}*/
-/*}*/
+@keyframes moving2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
 
-/*@keyframes colorChanging {*/
-    /*0% {*/
-        /*background: #1B9EA0;*/
-    /*}*/
+    50% {
+        transform: translate(-10%, 10%);
+    }
 
-    /*25% {*/
-        /*background: #2F90FF;*/
-    /*}*/
+    75% {
+        transform: translate(20%, -20%);
+    }
+}
 
-    /*50% {*/
-        /*background: #34488C;*/
-    /*}*/
+@keyframes colorChanging1 {
+    0% {
+        background: #177198;
+    }
 
-    /*100% {*/
-        /*background: #185A8C;*/
-    /*}*/
-/*}*/
+    50% {
+        background: #2788d8;
+    }
+
+    100% {
+        background: #523291;
+        opacity: 0.3;
+    }
+}
+
+@keyframes colorChanging2 {
+    0% {
+        background: #2788d8;
+    }
+
+    50% {
+        background: #177198;
+    }
+    
+    100% {
+        background: #23b2a8;
+    }
+}
+
+@keyframes colorChanging3 {
+    0% {
+        background: #23b2a8;
+    }
+
+    50% {
+        background: #523291;
+        opacity: 0.1;
+    }
+
+    100% {
+        background: #2788d8;
+    }
+}
 
 .view {
     display: flex;

@@ -8,3 +8,11 @@ export const Form = ({ name, type, children, ...props }) => {
         </div>
     );
 };
+
+export const Field = ({ children }) => {
+    return (
+        <div className='form-field'>
+            {children}
+        </div>
+    )
+};
